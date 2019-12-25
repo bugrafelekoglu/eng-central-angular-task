@@ -1,0 +1,28 @@
+<app-button-grid [grid]="grid"></app-button-grid>
+<div>
+  <h2>Manual Override</h2>
+
+  <div class="form-group">
+    <label id="xAxis">X:</label>
+    <select class="form-control" (change)="selectX($event.target.value)">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <label id="yAxis">Y:</label>
+    <select class="form-control" (change)="selectY($event.target.value)">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <label id="select-radio">Set to:</label>
+
+
+    <p> <button (click)="change()">Confirm</button> </p>
+  </div>
+</div>
+<div>
+  <p> <button (click)="reset()">RESET</button> </p>
+</div>

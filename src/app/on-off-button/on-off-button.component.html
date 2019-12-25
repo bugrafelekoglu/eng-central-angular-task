@@ -1,1 +1,1 @@
-<button (click)="toggle()"> {{status}}</button> 
+<button [ngClass]="[btnStyle[status]]" (click)="toggle()"> {{title[status]}}</button> 

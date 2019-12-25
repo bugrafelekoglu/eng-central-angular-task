@@ -1,0 +1,13 @@
+.btn-off {
+  background-color: #DC3545;
+}
+
+.btn-on {
+  background-color: #28A745;
+}
+
+button {
+  height: 75px;
+  width: 75px;
+  font-size: 20px; 
+}

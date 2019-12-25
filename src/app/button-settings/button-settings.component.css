@@ -1,0 +1,20 @@
+.confirm {
+  border: 2px solid #007BFF;
+  background-color: #007BFF;
+}
+
+.reset {
+  border: 2px solid currentColor;
+  background-color: white;
+  color: #cc0000;
+}
+
+.reset:hover {
+  border: 2px solid #DC3545;
+  background-color: #DC3545;
+  color: white;
+}
+
+.button:active, button:active {
+  transform: translateY(2px);
+}

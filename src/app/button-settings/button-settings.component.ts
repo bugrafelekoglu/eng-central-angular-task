@@ -35,18 +35,18 @@ export class ButtonSettingsComponent implements OnInit {
   }
 
   selectX(xVal) {
-    this.xAxis = xVal-1;
+    this.xAxis = xVal;
   }
 
   selectY(yVal) {
-    this.yAxis = yVal-1;
+    this.yAxis = yVal;
   }
 
   selectStatus(stat) {
     this.selection = stat;
   }
 
-  change() {
+  confirm() {
     this.grid[this.xAxis][this.yAxis] = this.selection;
   }
 }

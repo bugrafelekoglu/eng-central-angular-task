@@ -1,30 +1,35 @@
 <app-button-grid [grid]="grid"></app-button-grid>
-<div>
+<div class="right-panel">
   <h2>Manual Override</h2>
-  <label id="xAxis">X:</label>
-  <select class="form-control" (change)="selectX($event.target.value)">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
-  <label id="yAxis">Y:</label>
-  <select class="form-control" (change)="selectY($event.target.value)">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
-  <label id="select-radio">Set to:</label>
-  <select class="form-control" (change)="selectStatus($event.target.value)">
-    <option value="true">ON</option>
-    <option value="false">OFF</option>
-  </select>
+  <div>
+    <label id="xAxis">X:</label>
+    <select class="form-control" (change)="selectX($event.target.value)">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+    </select>
+  </div>
+  <div>
+    <label id="yAxis">Y:</label>
+    <select class="form-control" (change)="selectY($event.target.value)">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+    </select>
+  </div>
+  <div>
+    <label id="select-radio">Set to:</label>
+    <select class="form-control" (change)="selectStatus($event.target.value)">
+      <option value="true">ON</option>
+      <option value="false">OFF</option>
+    </select>
+  </div>
   <p> 
-    <button (click)="change()">Confirm</button> 
+    <button class="confirm" (click)="confirm()">Confirm</button> 
   </p>
   <p> 
-    <button (click)="reset()">RESET</button>
+    <button class="reset" (click)="reset()">Reset</button>
   </p>
-
 </div>

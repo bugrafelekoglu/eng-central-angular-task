@@ -7,6 +7,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
   margin: 0;
 }
@@ -29,6 +33,8 @@ h1 {
 
 h2 {
   font-size: 20px;
+  margin-block-start: 5px;
+  margin-block-end: 10px;
 }
 
 h1, h2 {
@@ -56,12 +62,17 @@ table {
   text-align: center;
 }
 
+table p {
+  padding: 5px 15px;
+  font-size: 20px;
+}
+
 td {
   vertical-align: baseline;
 }
 
-table p {
-  padding: 0px 15px;
+tr {
+  font-size: 20px;
 }
 
 /* Input */
@@ -74,28 +85,29 @@ input {
 }
 
 label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 4px;
-  display: block;
+  margin: 10px 5px;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 /* Button */
 .button, button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #1976d2;
+  background-color: #007BFF;
   color: white;
   border: none;
 }
 
 .button:hover, button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   font-weight: normal;
 }
 
@@ -104,19 +116,33 @@ label {
   cursor: auto;
 }
 
-/* Button Settings */
+/* Button Settings Panel */
 app-button-settings {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.right-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
+  margin: 13px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  height: 312px;
+}
+
+.right-panel div {
+  align-self: flex-start;
 }
 
 /* Top Bar */
 app-top-bar {
   width: 100%;
   height: 68px;
-  background-color: #1976d2;
+  background-color: #007BFF;
   padding: 16px;
   display: flex;
   flex-direction: row;

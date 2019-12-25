@@ -8,17 +8,14 @@ import { Input } from '@angular/core';
 })
 export class OnOffButtonComponent implements OnInit {
   @Input() status: boolean;
-  title: string;
-  constructor() { 
+  btnStyle = {true: 'btn-on', false: 'btn-off'};
+  title = {true: 'ON', false: 'OFF'};
 
-  }
+  constructor() { }
 
-  ngOnInit() { 
-
-  }
+  ngOnInit() { }
 
   toggle() {
     this.status = (this.status) ? false : true;
   }
-
 }

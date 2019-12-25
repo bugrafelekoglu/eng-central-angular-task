@@ -2,7 +2,7 @@
   <tr *ngFor="let rows of grid.reverse(); let i = index">
     <p> {{grid.length-i}} </p>
     <td *ngFor="let status of rows; let j = index">
-      <app-on-off-button [status]="status">
+      <app-on-off-button [status]="status" [y]="grid.length-i-1" [x]="j" (toggleEvent)="receiveToggle($event)">
       </app-on-off-button>
       
     </td>

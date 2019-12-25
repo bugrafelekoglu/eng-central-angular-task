@@ -8,12 +8,11 @@ import { Input } from '@angular/core';
 })
 export class ButtonGridComponent implements OnInit {
   @Input() grid: boolean[][];
-  constructor() { 
+  constructor() { }
 
+  ngOnInit() { }
+
+  receiveToggle($event) {
+    this.grid[$event.y][$event.x]=$event.status;
   }
-
-  ngOnInit() {
-    
-  }
-
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-button-settings',
@@ -7,26 +6,27 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./button-settings.component.css']
 })
 export class ButtonSettingsComponent implements OnInit {
+  // Grid and variables for dropdown menus
   grid: boolean[][];
-  xAxis: number;
-  yAxis: number;
-  selection: boolean;
+  xSel: number;
+  ySel: number;
+  statSel: boolean;
 
   constructor() { 
-
   }
 
-
+  // Initializing the selections and grid
   ngOnInit() {
-    this.xAxis = 0;
-    this.yAxis = 0;
-    this.selection = true;
+    this.xSel = 0;
+    this.ySel = 0;
+    this.statSel = true;
     this.grid = [[false, false, false, false],
                  [false, false, false, false],
                  [false, false, false, false],
                  [false, false, false, false]];
   }
 
+  // Resetting grid status
   reset() {
     this.grid = [[false, false, false, false],
                  [false, false, false, false],
@@ -34,19 +34,23 @@ export class ButtonSettingsComponent implements OnInit {
                  [false, false, false, false]];
   }
 
+  // Dropdown selection of X axis
   selectX(xVal) {
-    this.xAxis = xVal;
+    this.xSel = xVal;
   }
 
+  // Dropdown selection of Y axis
   selectY(yVal) {
-    this.yAxis = yVal;
+    this.ySel = yVal;
   }
 
+  // Dropdown selection of status
   selectStatus(stat) {
-    this.selection = stat;
+    this.statSel = stat;
   }
 
+  // Confirming the status change on selected button
   confirm() {
-    this.grid[this.yAxis][this.xAxis] = this.selection;
+    this.grid[this.ySel][this.xSel] = this.statSel;
   }
 }

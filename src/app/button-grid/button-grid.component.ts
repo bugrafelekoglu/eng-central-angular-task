@@ -7,11 +7,14 @@ import { Input } from '@angular/core';
   styleUrls: ['./button-grid.component.css']
 })
 export class ButtonGridComponent implements OnInit {
+  // Boolean grid which represents button states passed from parent button-settings
   @Input() grid: boolean[][];
+
   constructor() { }
 
   ngOnInit() { }
 
+  // Changes of each individual buttons obtained by this method
   receiveToggle($event) {
     this.grid[$event.y][$event.x]=$event.status;
   }

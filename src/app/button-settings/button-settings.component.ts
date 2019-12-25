@@ -12,8 +12,7 @@ export class ButtonSettingsComponent implements OnInit {
   ySel: number;
   statSel: boolean;
 
-  constructor() { 
-  }
+  constructor() { }
 
   // Initializing the selections and grid
   ngOnInit() {
@@ -26,27 +25,17 @@ export class ButtonSettingsComponent implements OnInit {
                  [false, false, false, false]];
   }
 
+  // Changes of each individual buttons obtained by this method
+  toggleHandler(event) {
+    this.grid[event.y][event.x] = event.status;
+  }
+
   // Resetting grid status
   reset() {
     this.grid = [[false, false, false, false],
                  [false, false, false, false],
                  [false, false, false, false],
                  [false, false, false, false]];
-  }
-
-  // Dropdown selection of X axis
-  selectX(xVal) {
-    this.xSel = xVal;
-  }
-
-  // Dropdown selection of Y axis
-  selectY(yVal) {
-    this.ySel = yVal;
-  }
-
-  // Dropdown selection of status
-  selectStatus(stat) {
-    this.statSel = stat;
   }
 
   // Confirming the status change on selected button

@@ -1,34 +1,40 @@
-<app-button-grid [grid]="grid"></app-button-grid>
-<div class="right-panel">
-  <h2>Manual Override</h2>
-  <div>
-    <label id="xAxis">X:</label>
-    <select class="form-control" (change)="selectX($event.target.value)">
-      <option value="0">1</option>
-      <option value="1">2</option>
-      <option value="2">3</option>
-      <option value="3">4</option>
-    </select>
+<app-button-grid [grid]="grid" (forwardToggle)="toggleHandler($event)"></app-button-grid>
+<div class="settings-panel">
+  <div class="confirm-panel">
+    <h2>Manual Override</h2>
+    <div class="row">
+      <div>
+        <div>
+          <label id="xAxis">X:</label>
+          <select class="form-control" [(ngModel)]="ySel">
+            <option [ngValue]="0">1</option>
+            <option [ngValue]="1">2</option>
+            <option [ngValue]="2">3</option>
+            <option [ngValue]="3">4</option>
+          </select>
+        </div>
+        <div>
+          <label id="yAxis">Y:</label>
+          <select class="form-control" [(ngModel)]="xSel">
+            <option [ngValue]="0">1</option>
+            <option [ngValue]="1">2</option>
+            <option [ngValue]="2">3</option>
+            <option [ngValue]="3">4</option>
+          </select>
+        </div>
+      </div>
+      <div class="radio-panel">
+        <label>Set to:</label>
+        <br/>
+        <input type="radio" name="statSel" [(ngModel)]="statSel" [value]="true"> ON
+        <br/>
+        <input type="radio" name="statSel" [(ngModel)]="statSel" [value]="false"> OFF
+      </div>
+    </div>
+    <p> 
+      <button class="confirm" (click)="confirm()">Confirm</button> 
+    </p>
   </div>
-  <div>
-    <label id="yAxis">Y:</label>
-    <select class="form-control" (change)="selectY($event.target.value)">
-      <option value="0">1</option>
-      <option value="1">2</option>
-      <option value="2">3</option>
-      <option value="3">4</option>
-    </select>
-  </div>
-  <div>
-    <label id="select-radio">Set to:</label>
-    <select class="form-control" (change)="selectStatus($event.target.value)">
-      <option value="true">ON</option>
-      <option value="false">OFF</option>
-    </select>
-  </div>
-  <p> 
-    <button class="confirm" (click)="confirm()">Confirm</button> 
-  </p>
   <p> 
     <button class="reset" (click)="reset()">Reset</button>
   </p>

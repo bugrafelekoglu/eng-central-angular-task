@@ -11,7 +11,6 @@ export class OnOffButtonComponent implements OnInit {
   @Input() status: boolean;
   @Input() x: number;
   @Input() y: number;
-  // When clicked on the button itself, it emits a change about its state and location to button-grid
   @Output() toggleEvent = new EventEmitter();
 
   // Two properties of button adapts themselves to changes
@@ -22,7 +21,7 @@ export class OnOffButtonComponent implements OnInit {
 
   ngOnInit() { }
 
-  // When clicked an event emitted to button-grid
+  // When button is clicked, the status info sent to button-grid
   toggle() {
     this.toggleEvent.emit({status: !this.status, x:this.x, y:this.y});
   }

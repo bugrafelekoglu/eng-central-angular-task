@@ -1,12 +1,21 @@
 .confirm {
+  border: 2px solid currentColor;
+  background-color: white;
+  color: #007BFF;
+  width: 90px;
+}
+
+.confirm:hover {
   border: 2px solid #007BFF;
   background-color: #007BFF;
+  color: white;
 }
 
 .reset {
   border: 2px solid currentColor;
   background-color: white;
-  color: #cc0000;
+  color: #DC3545;
+  width: 90px;
 }
 
 .reset:hover {

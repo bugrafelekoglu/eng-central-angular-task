@@ -23,7 +23,8 @@ body {
 
 .row {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 /* Text */
@@ -120,22 +121,29 @@ label {
 app-button-settings {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 }
 
-.right-panel {
+.settings-panel {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
   margin: 13px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  height: 312px;
+  height: 311px;
 }
 
-.right-panel div {
-  align-self: flex-start;
+.confirm-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #c4c4c4;
+  padding: 10px;
+}
+
+.radio-panel {
+  margin-top: -4px;
+  padding-left: 20px;
 }
 
 /* Top Bar */
@@ -146,7 +154,7 @@ app-top-bar {
   padding: 16px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

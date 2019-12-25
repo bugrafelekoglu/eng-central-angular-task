@@ -47,6 +47,6 @@ export class ButtonSettingsComponent implements OnInit {
   }
 
   confirm() {
-    this.grid[this.xAxis][this.yAxis] = this.selection;
+    this.grid[this.yAxis][this.xAxis] = this.selection;
   }
 }

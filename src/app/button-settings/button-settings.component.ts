@@ -27,7 +27,7 @@ export class ButtonSettingsComponent implements OnInit {
 
   // Changes of each individual buttons obtained by this method
   toggleHandler(event) {
-    this.grid[event.y][event.x] = event.status;
+    this.grid[event.x][event.y] = event.status;
   }
 
   // Resetting grid status
@@ -40,6 +40,6 @@ export class ButtonSettingsComponent implements OnInit {
 
   // Confirming the status change on selected button
   confirm() {
-    this.grid[this.ySel][this.xSel] = this.statSel;
+    this.grid[this.xSel][this.ySel] = this.statSel;
   }
 }

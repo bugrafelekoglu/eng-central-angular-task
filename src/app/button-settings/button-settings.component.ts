@@ -30,6 +30,11 @@ export class ButtonSettingsComponent implements OnInit {
     this.grid[event.row][event.column] = event.status;
   }
 
+  // Confirming the status change on selected button
+  confirm() {
+    this.grid[this.ySel][this.xSel] = this.statSel;
+  }
+
   // Resetting grid status
   reset() {
     for(var i: number = 0; i < this.ySize; i++) {
@@ -40,11 +45,7 @@ export class ButtonSettingsComponent implements OnInit {
     }
   }
 
-  // Confirming the status change on selected button
-  confirm() {
-    this.grid[this.ySel][this.xSel] = this.statSel;
-  }
-
+  // 
   generateMatrix(x: number, y: number): boolean[][] {
     let grid = [];
 

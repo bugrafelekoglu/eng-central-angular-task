@@ -10,6 +10,7 @@ export class ButtonGridComponent implements OnInit {
   // Boolean grid comes from button-settings to create button grid
   @Input() grid: boolean[][];
   @Output() forwardToggle = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit() { }

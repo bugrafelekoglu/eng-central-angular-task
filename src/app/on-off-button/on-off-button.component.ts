@@ -9,13 +9,13 @@ import { Input, Output, EventEmitter } from '@angular/core';
 export class OnOffButtonComponent implements OnInit {
   // Each button takes their location and current status from parent button-grid
   @Input() status: boolean;
-  @Input() x: number;
-  @Input() y: number;
+  @Input() row: number;
+  @Input() column: number;
   @Output() toggleEvent = new EventEmitter();
 
   // Two properties of button adapts themselves to changes
-  btnStyle = {true: 'btn-on', false: 'btn-off'};
-  title = {true: 'ON', false: 'OFF'};
+  private btnStyle = {true: 'btn-on', false: 'btn-off'};
+  private title = {true: 'ON', false: 'OFF'};
 
   constructor() { }
 
@@ -23,6 +23,6 @@ export class OnOffButtonComponent implements OnInit {
 
   // When button is clicked, the status info sent to button-grid
   toggle() {
-    this.toggleEvent.emit({status: !this.status, x:this.x, y:this.y});
+    this.toggleEvent.emit({status: !this.status, row:this.row, column:this.column});
   }
 }

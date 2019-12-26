@@ -21,7 +21,7 @@ body {
   justify-content: space-around;
 }
 
-.row {
+.rowFlex {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

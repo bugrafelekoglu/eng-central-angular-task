@@ -2,24 +2,18 @@
 <div class="settings-panel">
   <div class="confirm-panel">
     <h2>Manual Override</h2>
-    <div class="row">
+    <div class="rowFlex">
       <div>
         <div>
           <label id="xAxis">X:</label>
-          <select class="form-control" [(ngModel)]="ySel">
-            <option [ngValue]="0">1</option>
-            <option [ngValue]="1">2</option>
-            <option [ngValue]="2">3</option>
-            <option [ngValue]="3">4</option>
+          <select class="form-control" [(ngModel)]="xSel">
+            <option *ngFor="let item of makeArray(xSize); let i = index" [ngValue]="i">{{i+1}}</option>
           </select>
         </div>
         <div>
           <label id="yAxis">Y:</label>
-          <select class="form-control" [(ngModel)]="xSel">
-            <option [ngValue]="0">1</option>
-            <option [ngValue]="1">2</option>
-            <option [ngValue]="2">3</option>
-            <option [ngValue]="3">4</option>
+          <select class="form-control" [(ngModel)]="ySel">
+            <option *ngFor="let item of makeArray(ySize); let i = index" [ngValue]="i">{{i+1}}</option>
           </select>
         </div>
       </div>
